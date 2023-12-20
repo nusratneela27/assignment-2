@@ -1,13 +1,13 @@
 import { TOrder, TUser } from './user-interface';
 import { User } from '../user-model';
 
-// post     api/users
+// post   api/users
 const createUserIntoDb = async (user: TUser) => {
   const result = await User.create(user);
   return result;
 };
 
-// get    api/users
+// get  api/users
 const getAllUserFromDb = async () => {
   const result = await User.find(
     {},
@@ -17,7 +17,7 @@ const getAllUserFromDb = async () => {
   return result;
 };
 
-// get    api/users/:userId
+// get   api/users/:userId
 const getSingleUserFromDb = async (id: number) => {
   const user = await User.isUserExists(id);
   if (!user) {
@@ -26,7 +26,7 @@ const getSingleUserFromDb = async (id: number) => {
   return user;
 };
 
-// put update    api/users/:userId
+// put update  api/users/:userId
 const updateUserInfoDb = async (id: number, user: TUser) => {
   const existsUser = await User.isUserExists(id);
   if (!existsUser) {
@@ -38,13 +38,9 @@ const updateUserInfoDb = async (id: number, user: TUser) => {
   });
 
   return result;
-
-  // const userData = await User.updateOne({ userId: id }, user);
-  // const userInfo = await User.findOne({ userId: id }, { _id: 0, orders: 0 });
-  // return { userData, userInfo };
 };
 
-// delete     api/users/:userId
+// delete  api/users/:userId
 const deleteUserFromDb = async (id: number) => {
   const existsUser = await User.isUserExists(id);
   if (!existsUser) {
