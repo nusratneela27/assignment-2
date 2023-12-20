@@ -147,7 +147,7 @@ const deleteUser = async (req: Request, res: Response) => {
   }
 };
 
-// put  api/users/:userId/orders
+// put new product api/users/:userId/orders
 const addNewProduct = async (req: Request, res: Response) => {
   try {
     const id = req.params?.userId;
