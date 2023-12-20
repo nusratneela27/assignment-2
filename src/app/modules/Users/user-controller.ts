@@ -179,7 +179,7 @@ const addNewProduct = async (req: Request, res: Response) => {
   }
 };
 
-// get  api/users/:userId/orders
+// get user orders  api/users/:userId/orders
 const getUserOrders = async (req: Request, res: Response) => {
   try {
     const id = req.params?.userId;
