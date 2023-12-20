@@ -1,5 +1,31 @@
 # Mongoose Express CRUD Mastery Assignment
 
+## Local Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd /your-folder
+   ```
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Create a `.env` file in the root of the project and set the following environment variables:
+
+   ```env
+   PORT=5000
+   DB_URL=your_mongodb_url
+   BCRYPT=12
+   ```
+
+   Replace `your_mongodb_url` with the actual MongoDB URL.
+
 ## API Endpoints
 
 ### Create a new user
