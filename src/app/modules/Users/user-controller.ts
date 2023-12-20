@@ -120,7 +120,7 @@ const updateUser = async (req: Request, res: Response) => {
   }
 };
 
-// delete   api/users/:userId
+// delete user api/users/:userId
 const deleteUser = async (req: Request, res: Response) => {
   try {
     const id = req.params?.userId;
