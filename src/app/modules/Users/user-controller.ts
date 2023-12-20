@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { UserServices } from './user-service';
 import userValidation, { orderValidationSchema } from './user-validation';
 
-// post    api/users
+// post  api/users
 const createUser = async (req: Request, res: Response) => {
   try {
     const userData = req.body;
@@ -15,6 +15,7 @@ const createUser = async (req: Request, res: Response) => {
       message: 'User created successfully!',
       data: result,
     });
+
     // eslint-disable-next-line
   } catch (error: any) {
     res.status(404).json({
@@ -51,7 +52,7 @@ const getAllUser = async (req: Request, res: Response) => {
   }
 };
 
-// get   api/users/:userId
+// get  api/users/:userId
 const getSingleUser = async (req: Request, res: Response) => {
   try {
     const id = req.params?.userId;
@@ -146,7 +147,7 @@ const deleteUser = async (req: Request, res: Response) => {
   }
 };
 
-// put   api/users/:userId/orders
+// put  api/users/:userId/orders
 const addNewProduct = async (req: Request, res: Response) => {
   try {
     const id = req.params?.userId;
@@ -203,7 +204,7 @@ const getUserOrders = async (req: Request, res: Response) => {
   }
 };
 
-// get    api/users/:userId/orders/total-price
+// get  api/users/:userId/orders/total-price
 const getUserOrdersTotal = async (req: Request, res: Response) => {
   try {
     const id = req.params?.userId;
