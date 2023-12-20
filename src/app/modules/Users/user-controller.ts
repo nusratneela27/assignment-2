@@ -204,7 +204,7 @@ const getUserOrders = async (req: Request, res: Response) => {
   }
 };
 
-// get  api/users/:userId/orders/total-price
+// get total order  api/users/:userId/orders/total-price
 const getUserOrdersTotal = async (req: Request, res: Response) => {
   try {
     const id = req.params?.userId;
